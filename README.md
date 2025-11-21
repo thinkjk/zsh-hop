@@ -51,7 +51,7 @@ $ docker run --name myapp --network bridge nginx
 
 1. Clone this repository into Oh-My-Zsh's plugins directory:
    ```bash
-   git clone https://github.com/yourusername/zsh-hop.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-hop
+   git clone https://github.com/thinkjk/zsh-hop.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-hop
    ```
 
 2. Add `zsh-hop` to your plugins array in `~/.zshrc`:
@@ -68,7 +68,7 @@ $ docker run --name myapp --network bridge nginx
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/zsh-hop.git ~/.zsh/zsh-hop
+   git clone https://github.com/thinkjk/zsh-hop.git ~/.zsh/zsh-hop
    ```
 
 2. Source the plugin in your `~/.zshrc`:
@@ -85,17 +85,17 @@ $ docker run --name myapp --network bridge nginx
 
 #### Zinit
 ```bash
-zinit light yourusername/zsh-hop
+zinit light thinkjk/zsh-hop
 ```
 
 #### Zplug
 ```bash
-zplug "yourusername/zsh-hop"
+zplug "thinkjk/zsh-hop"
 ```
 
 #### Antigen
 ```bash
-antigen bundle yourusername/zsh-hop
+antigen bundle thinkjk/zsh-hop
 ```
 
 ## Usage
