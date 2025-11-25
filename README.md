@@ -128,9 +128,9 @@ $ docker run --name mycontainer --network bridge --restart always nginx
 # Jump directly to "restart" (or see labels if multiple matches)
 ```
 
-### Find and Replace (Ctrl+H)
+### Find and Replace (Ctrl+G)
 
-1. Press `Ctrl+H` (default) while typing a command
+1. Press `Ctrl+G` (default) while typing a command
 2. Type the text you want to find and press `Enter`
 3. Type the replacement text and press `Enter`
 4. All occurrences in the current line are replaced
@@ -141,7 +141,7 @@ $ docker run --name mycontainer --network bridge --restart always nginx
 # Before
 $ docker exec -it mycontainer bash
 
-# Press Ctrl+H
+# Press Ctrl+G
 # Find: mycontainer
 # Replace with: production-app
 
@@ -154,7 +154,7 @@ $ docker exec -it production-app bash
 # Before
 $ cp file1.txt file2.txt && mv file3.txt file4.txt
 
-# Press Ctrl+H
+# Press Ctrl+G
 # Find: .txt
 # Replace with: .bak
 
@@ -172,7 +172,7 @@ Add these variables to your `~/.zshrc` **before** loading the plugin to customiz
 # Change the hop keybinding (default: ^F = Ctrl+F)
 ZSH_HOP_KEY="^J"  # Use Ctrl+J instead
 
-# Change the find/replace keybinding (default: ^H = Ctrl+H)
+# Change the find/replace keybinding (default: ^G = Ctrl+G)
 ZSH_HOP_REPLACE_KEY="^R"  # Use Ctrl+R instead
 ```
 
@@ -256,7 +256,7 @@ plugins=(... zsh-hop)
 
 ### Keybinding conflicts
 
-If `Ctrl+F` or `Ctrl+H` don't work:
+If `Ctrl+F` or `Ctrl+G` don't work:
 - Some terminals map these differently or block them
 - Try Alt-based bindings: `ZSH_HOP_KEY="\ef"` and `ZSH_HOP_REPLACE_KEY="\eh"`
 - Or choose different keys entirely

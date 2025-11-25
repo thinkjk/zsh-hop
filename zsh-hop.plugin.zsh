@@ -12,7 +12,7 @@ ZSH_HOP_LABELS=${ZSH_HOP_LABELS:-"asdfghjklqwertyuiopzxcvbnm"}
 
 # Default keybindings
 ZSH_HOP_KEY=${ZSH_HOP_KEY:-"^F"}  # Ctrl+F for hop (character or word)
-ZSH_HOP_REPLACE_KEY=${ZSH_HOP_REPLACE_KEY:-"^H"}  # Ctrl+H for find/replace
+ZSH_HOP_REPLACE_KEY=${ZSH_HOP_REPLACE_KEY:-"^G"}  # Ctrl+G for find/replace
 
 # Timeout for auto-submit on single character (in seconds)
 ZSH_HOP_TIMEOUT=${ZSH_HOP_TIMEOUT:-0.5}
@@ -78,7 +78,7 @@ zsh-hop-to-char() {
         else
             # Normal character
             search_term+="$char"
-            echo -ne "$char"
+            printf "%s" "$char"
 
             # Auto-submit on single character followed by configurable delay
             if [[ ${#search_term} -eq 1 ]]; then
@@ -99,7 +99,7 @@ zsh-hop-to-char() {
                         return 0
                     else
                         search_term+="$next_char"
-                        echo -ne "$next_char"
+                        printf "%s" "$next_char"
                     fi
                 else
                     # No additional input - treat as single character search
@@ -260,7 +260,7 @@ zsh-hop-find-replace() {
         else
             # Normal character
             find_str+="$char"
-            echo -ne "$char"
+            printf "%s" "$char"
         fi
     done
 
@@ -314,7 +314,7 @@ zsh-hop-find-replace() {
         else
             # Normal character
             replace_str+="$char"
-            echo -ne "$char"
+            printf "%s" "$char"
         fi
     done
 
